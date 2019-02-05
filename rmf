@@ -7,8 +7,8 @@ errmsg="rmf FILE [#ITEM [TERM...]]"
 usage="usage: $errmsg"
 # check that arg is a file
 
-shift # $1 is file name
 [[ $1 = "usage" ]] && echo $usage && exit
+shift # $1 is file name
 
 file="$TODO_DIR/$1"
 [[ ! -f "$file" ]] && echo "No file named '$file' in $TODO_DIR" && exit
